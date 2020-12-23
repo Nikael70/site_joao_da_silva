@@ -1,0 +1,119 @@
+h1{
+ -webkit-animation: aparece 3s ease-in;
+    animation: aparece 3s ease-in;
+}
+@keyframes aparece {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@webkit-keyframes aparece{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.citacao-bio {
+    background-color: #D9E5E3;
+    border: 10px solid #C2CCCA;
+    padding: 20px;
+    margin: 20px 40px;
+    width: 30ch;
+    box-sizing: border-box;
+    transition: transform 1s linear , box-shadow 1s ease-in;
+    transition-delay: 0s, 1s;
+    position: relative;
+    -webkit-animation: quica 1s infinite;
+    animation: quica 1s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in; 
+    animation-timing-function: ease-in;
+}
+-webkit-@keyframes quica {
+        from{
+            top:0;
+        }
+    90%{
+        transform: rotate(-2deg);
+    }
+    95%{
+        transform: rotate(2deg);
+    }
+        to {
+            top: 1em;
+        }
+    }
+    
+@keyframes quica {
+        from{
+            top:0;
+        }
+     90%{
+        transform: rotate(-2deg);
+    }
+     95%{
+        transform: rotate(2deg);
+    }
+        to {
+            top: 1em;
+        }
+}
+    
+.petrobras {
+    float: left;
+    margin-left: 0;
+}
+
+.fiat {
+    float: right;
+    margin-right: 0;
+}
+.citacao-bio:before{
+    content: '"';
+    position: absolute;
+    font-size: 10em;
+    line-height: .8;
+    color: #BBB;
+    z-index: 1;
+}
+.citacao-bio > p{
+    position: relative;
+    z-index: 1;
+}
+
+.citacao-bio:hover,
+.citacao-bio:focus{
+    box-shadow: 0 0 0 99999px rgba(0,0,0.8);
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.citacao-bio:nth-of-type(odd):hover,
+.citacao-bio:nth-of-type(odd):focus{
+    transform: scale(1.2) rotate(5deg);
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.citacao-bio:nth-of-type(even):hover,
+.citacao-bio:nth-of-type(even):focus{
+    transform: scale(1.2) rotate(-5deg);
+}
+table{
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+th{
+    background-color: red;
+    border: 5px solid black;
+}
+td {
+    background-color: blue;
+    border: 5px solid black;
+}
